@@ -19,7 +19,6 @@
             background-image: url("玫瑰花.gif");
             background-size: contain;
             background-repeat: no-repeat;
-            background-position: center center;
         }
         .subtitle {
             font-size: 24px;
@@ -29,17 +28,7 @@
     <script>
         /* JavaScript代码 */
         var audio = new Audio("Groove Coverage - God Is a Girl (Chillout Mix).flac");
-        function playMusic() {
-            audio.play();
-        }
-        function stopMusic() {
-            audio.pause();
-            audio.currentTime = 0;
-        }
-
-        window.onload = function() {
-            playMusic();
-        };
+        audio.play();
     </script>
 </head>
 <body>
