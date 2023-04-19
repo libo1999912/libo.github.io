@@ -5,6 +5,8 @@
     <style>
         /* CSS代码 */
         .container {
+            position: relative;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -13,12 +15,11 @@
         }
         .rose {
             width: 100%;
-            height: auto;
-            max-width: 360px;
-            max-height: 640px;
+            height: 100%;
             background-image: url("玫瑰花.gif");
             background-size: contain;
             background-repeat: no-repeat;
+            background-position: center;
         }
         .subtitle {
             font-size: 24px;
@@ -28,12 +29,20 @@
     <script>
         /* JavaScript代码 */
         var audio = new Audio("Groove Coverage - God Is a Girl (Chillout Mix).flac");
-        audio.play();
+        function playMusic() {
+            audio.play();
+        }
+        function stopMusic() {
+            audio.pause();
+            audio.currentTime = 0;
+        }
     </script>
 </head>
 <body>
     <div class="container">
         <div class="rose"></div>
+        <button onclick="playMusic()">播放音乐</button>
+        <button onclick="stopMusic()">停止音乐</button>
     </div>
 </body>
 </html>
