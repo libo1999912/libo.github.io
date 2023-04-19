@@ -2,16 +2,32 @@
 <html>
 <head>
     <title>李博道歉网页</title>
-    <style>
+     <style>
         /* CSS代码 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
         .rose {
-            width: 360px;
-            height: 640px;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
             background-image: url("玫瑰花.gif");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
         }
         .subtitle {
             font-size: 24px;
             text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
     <script>
@@ -27,7 +43,7 @@
     </script>
 </head>
 <body>
-    <div class="rose"></div>
+    <div class="rose"><img src="玫瑰花.gif"></div>
     <div class="subtitle">李博道歉网页</div>
     <button onclick="playMusic()">播放音乐</button>
     <button onclick="stopMusic()">停止音乐</button>
